@@ -1,123 +1,50 @@
+# _Portland Info Site_
 
-CONTENTS OF THIS FILE
----------------------
+#### A site about the city of Portland  | April 18, 2016
 
- * About Drupal
- * Configuration and features
- * Installation profiles
- * Appearance
- * Developing for Drupal
+#### By: Yvonna Contreras & Afton Downey
 
-ABOUT DRUPAL
-------------
+## Description
 
-Drupal is an open source content management platform supporting a variety of
-websites ranging from personal weblogs to large community-driven websites. For
-more information, see the Drupal website at http://drupal.org/, and join the
-Drupal community at http://drupal.org/community.
+Drupal: Portland Info Site. This application was built using Drupal and provided practice in setting up a new Drupal site, getting experience with the Drupal interface, and creating content on the site.
 
-Legal information about Drupal:
- * Know your rights when using Drupal:
-   See LICENSE.txt in the same directory as this document.
- * Learn about the Drupal trademark and logo policy:
-   http://drupal.com/trademark
+## Prerequisites
 
-CONFIGURATION AND FEATURES
---------------------------
+You will need the following things properly installed on your computer:
+• [Drupal](https://www.drupal.org/project/drupal)
+• [MAMP] (https://www.mamp.info/en/)
 
-Drupal core (what you get when you download and extract a drupal-x.y.tar.gz or
-drupal-x.y.zip file from http://drupal.org/project/drupal) has what you need to
-get started with your website. It includes several modules (extensions that add
-functionality) for common website features, such as managing content, user
-accounts, image uploading, and search. Core comes with many options that allow
-site-specific configuration. In addition to the core modules, there are
-thousands of contributed modules (for functionality not included with Drupal
-core) available for download.
+## Setup/Installation Requirements
 
-More about configuration:
- * Install, upgrade, and maintain Drupal:
-   See INSTALL.txt and UPGRADE.txt in the same directory as this document.
- * Learn about how to use Drupal to create your site:
-   http://drupal.org/documentation
- * Download contributed modules to sites/all/modules to extend Drupal's
-   functionality:
-   http://drupal.org/project/modules
- * See also: "Developing for Drupal" for writing your own modules, below.
+1. Open Terminal and clone into this repository: https://github.com/yvonnapc/drupal-portland.git
+2. In your browser navigate to ```http://localhost:8888/phpmyadmin```, here is where you can select the Import tab and in the project directory go to ```sites > db-backups > databasename.sql.zip``` and click GO at the bottom of your screen
+3. Also in phpmyadmin, recreate the user you created initially in the database (the username and password can be found in the settings.php file)
+4. Open MAMP, select ```Preferences```, select ```Web Server``` tab, direct the ```Document Root``` at the top level of your project folder
+5. Navigate to ```http://localhost:8888``` where you will use Drupal Interface to configure the website and connect the Databases:
+      • Select the "Standard" install, click "Save and Continue".
+      • Select "English" as the language, click "Save and Continue".
+      • Under the "Set up database" tab, select "MySQL, MariaDB, or equivalent" and then fill in the name of your database, and the username and password you just created in phpMyAdmin.
+      • On the same tab, click on "Advanced Options". Under "Database host" enter "127.0.0.1" and under "Database port" enter "8889". This allows your Drupal installation to work with an important command line tool named Drush that we will learn about later.
+      • Then click "Save and Continue". This links your Drupal site to the database - this is not the account you will use to login and administer your site. After this step Drupal may take a moment to configure.
+      • On the next page, labelled "Configure site", pick a site name (like "My First Drupal Site") and enter your email address. This can be changed later.
+      • Enter details to create a site maintenance account, and make sure to save this Drupal username and password too with your database username and password. This is the account you will use to log in and administer your Drupal site.
+      • At the bottom select the country and timezone. Then click "Save and Continue".
 
-INSTALLATION PROFILES
----------------------
+## Known Bugs
 
-Installation profiles define additional steps (such as enabling modules,
-defining content types, etc.) that run after the base installation provided
-by core when Drupal is first installed. There are two basic installation
-profiles provided with Drupal core.
+N/A
 
-Installation profiles from the Drupal community modify the installation process
-to provide a website for a specific use case, such as a CMS for media
-publishers, a web-based project tracking tool, or a full-fledged CRM for
-non-profit organizations raising money and accepting donations. They can be
-distributed as bare installation profiles or as "distributions". Distributions
-include Drupal core, the installation profile, and all other required
-extensions, such as contributed and custom modules, themes, and third-party
-libraries. Bare installation profiles require you to download Drupal Core and
-the required extensions separately; place the downloaded profile in the
-/profiles directory before you start the installation process. Note that the
-contents of this directory may be overwritten during updates of Drupal core;
-it is advised to keep code backups or use a version control system.
+## Support and Contact Details
 
-Additionally, modules and themes may be placed inside subdirectories in a
-specific installation profile such as profiles/your_site_profile/modules and
-profiles/your_site_profile/themes respectively to restrict their usage to only
-sites that were installed with that specific profile.
+If you have any issues, questions, ideas, or concerns contact us through GitHub. If you would like to make a contribution to the code, feel free to do so and notify me by e-mail.
 
-More about installation profiles and distributions:
- * Read about the difference between installation profiles and distributions:
-   http://drupal.org/node/1089736
- * Download contributed installation profiles and distributions:
-   http://drupal.org/project/distributions
- * Develop your own installation profile or distribution:
-   http://drupal.org/developing/distributions
+## Technologies Used
 
-APPEARANCE
-----------
+• Drupal
+• phpMyAdmin
+• PHP
+• GIT
 
-In Drupal, the appearance of your site is set by the theme (themes are
-extensions that set fonts, colors, and layout). Drupal core comes with several
-themes. More themes are available for download, and you can also create your own
-custom theme.
+## License
 
-More about themes:
- * Download contributed themes to sites/all/themes to modify Drupal's
-   appearance:
-   http://drupal.org/project/themes
- * Develop your own theme:
-   http://drupal.org/documentation/theme
-
-DEVELOPING FOR DRUPAL
----------------------
-
-Drupal contains an extensive API that allows you to add to and modify the
-functionality of your site. The API consists of "hooks", which allow modules to
-react to system events and customize Drupal's behavior, and functions that
-standardize common operations such as database queries and form generation. The
-flexible hook architecture means that you should never need to directly modify
-the files that come with Drupal core to achieve the functionality you want;
-instead, functionality modifications take the form of modules.
-
-When you need new functionality for your Drupal site, search for existing
-contributed modules. If you find a module that matches except for a bug or an
-additional needed feature, change the module and contribute your improvements
-back to the project in the form of a "patch". Create new custom modules only
-when nothing existing comes close to what you need.
-
-More about developing:
- * Search for existing contributed modules:
-   http://drupal.org/project/modules
- * Contribute a patch:
-   http://drupal.org/patch/submit
- * Develop your own module:
-   http://drupal.org/developing/modules
- * Follow best practices:
-   http://drupal.org/best-practices
- * Refer to the API documentation:
-   http://api.drupal.org/api/drupal/7
+Copyright (c) 2016  |  Yvonna Contreras & Afton Downey  |  Epicodus  |  Portland, OR
