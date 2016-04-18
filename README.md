@@ -10,8 +10,8 @@ Drupal: Portland Info Site. This application was built using Drupal and provided
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer:
-• [Drupal](https://www.drupal.org/project/drupal)
+You will need the following things properly installed on your computer:<br>
+• [Drupal](https://www.drupal.org/project/drupal)<br>
 • [MAMP] (https://www.mamp.info/en/)
 
 ## Setup/Installation Requirements
