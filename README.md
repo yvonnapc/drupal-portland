@@ -21,7 +21,7 @@ You will need the following things properly installed on your computer:
 3. Also in phpmyadmin, recreate the user you created initially in the database (the username and password can be found in the settings.php file)
 4. Open MAMP, select ```Preferences```, select ```Web Server``` tab, direct the ```Document Root``` at the top level of your project folder
 5. Navigate to ```http://localhost:8888``` where you will use Drupal Interface to configure the website and connect the Databases:<br>
-      ```• Select the "Standard" install, click "Save and Continue"<br>```
+      • Select the "Standard" install, click "Save and Continue"<br>
       • Select "English" as the language, click "Save and Continue"<br>
       • Under the "Set up database" tab, select "MySQL, MariaDB, or equivalent" and then fill in the name of your database, and the username and password you just created in phpMyAdmin<br>
       • On the same tab, click on "Advanced Options". Under "Database host" enter "127.0.0.1" and under "Database port" enter "8889", then click "Save and Continue"<br>
@@ -40,10 +40,10 @@ If you have any issues, questions, ideas, or concerns contact us through GitHub.
 
 ## Technologies Used
 
-• Drupal
-• phpMyAdmin
-• PHP
-• GIT
+• Drupal<br>
+• phpMyAdmin<br>
+• PHP<br>
+• GIT<br>
 
 ## License
 
